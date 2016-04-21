@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.stoneryan.android.clientmanager.CreateNewCustomerActivity">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_container"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_marginTop="64dp">
+
+        <!-- Placeholder for image -->
+        <FrameLayout
+            android:layout_width="128dp"
+            android:layout_height="128dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take a Picture"
+            android:id="@+id/take_picture_button"
+            android:onClick="TakePictureButton"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/tablelayout"
+        android:layout_marginTop="16dp"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:text="@string/name_tv"
+                android:layout_column="0"/>
+
+            <EditText
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/newBillingName"
+                android:layout_column="1"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/card_tv"
+                android:layout_column="0"/>
+
+            <EditText
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/newBillingCardNum"
+                android:layout_column="1"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/exp_tv"
+                android:layout_column="0"/>
+
+            <EditText
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/newBillingExp"
+                android:layout_column="1"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/ccv_tv"
+                android:layout_column="0"/>
+
+            <EditText
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/newBillingCCV"
+                android:layout_column="1"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="@string/zip_tv"
+                android:layout_column="0"/>
+
+            <EditText
+                android:layout_width="256dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/newBillingZip"
+                android:layout_column="1"/>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tablelayout"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_cancel"
+            android:id="@+id/cancel_button"
+            android:onClick="CancelButton"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_save"
+            android:id="@+id/save_button"
+            android:onClick="SaveButton"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
